@@ -9,7 +9,7 @@ const router = express.Router();
 // Add pagination route for getting expenses
 router.get('/getexpenses', userauthentication.authenticate, async (req, res) => {
     const page = parseInt(req.query.page) || 1;
-    const pageSize = parseInt(req.query.pageSize) || 10;
+    const pageSize = parseInt(req.query.pageSize) || 9;
 
     try {
         const { data, total } = await getPaginatedData(page, pageSize);

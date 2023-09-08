@@ -34,7 +34,7 @@ const Expenses = sequelize.define('expenses', {
       const offset = (page - 1) * pageSize;
       const limit = pageSize;
   
-      const { rows: data, count: total } = await Expenses.findAndCountAll({
+      const { rows: data, count: total } = await Expenses.findAll({
         offset,
         limit,
       });
